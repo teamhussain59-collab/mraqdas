@@ -1,0 +1,130 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mr AQDAS | Developer Portfolio</title>
+<meta name="description" content="Mr AQDAS (Muhammad Hussain) is a self-taught developer from Pakistan building WhatsApp bots, Android apps, web tools and AI-powered projects.">
+<meta property="og:title" content="Mr AQDAS | Developer Portfolio"><meta property="og:description" content="WhatsApp bots, Android apps, web tools and AI projects by Mr AQDAS.">
+<meta property="og:image" content="/logo.jpg">
+<link rel="icon" href="/logo.jpg">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f7f8fc;color:#1a1d29;overflow-x:hidden}
+canvas#fx{position:fixed;inset:0;z-index:0}
+.bgimg{position:fixed;inset:0;z-index:0;background:url(/me.jpg) center 20%/cover no-repeat;opacity:.13;filter:blur(2px) saturate(1.1)}
+.wrap{position:relative;z-index:1;max-width:1000px;margin:auto;padding:0 20px}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:5;backdrop-filter:blur(10px);background:rgba(255,255,255,.8);border-bottom:1px solid rgba(255,0,60,.2)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+.logo{font-weight:900;letter-spacing:2px;color:#111}.logo b{color:#ff1744}
+nav a.s{font-size:14px;text-decoration:none;padding:8px 14px;border:1px solid #ff1744;border-radius:30px;color:#ff1744}
+.hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px;padding:40px 0}
+.ring{width:170px;height:170px;border-radius:50%;padding:4px;background:conic-gradient(#ff1744,#7c4dff,#00e5ff,#ff1744);animation:spin 6s linear infinite;box-shadow:0 0 60px rgba(255,23,68,.5)}
+.ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid #fff;animation:spin 6s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1{font-size:clamp(40px,9vw,84px);font-weight:900;line-height:1;position:relative}
+.glitch{position:relative;color:#111;text-shadow:0 0 22px rgba(255,23,68,.35)}
+.glitch:before,.glitch:after{content:attr(data-t);position:absolute;left:0;top:0;width:100%;overflow:hidden}
+.glitch:before{color:#00e5ff;animation:g1 2.5s infinite linear alternate-reverse;clip-path:inset(0 0 60% 0)}
+.glitch:after{color:#ff1744;animation:g2 3s infinite linear alternate-reverse;clip-path:inset(60% 0 0 0)}
+@keyframes g1{0%,90%{transform:none}92%{transform:translate(-4px,-2px)}96%{transform:translate(4px,1px)}}
+@keyframes g2{0%,88%{transform:none}91%{transform:translate(4px,2px)}95%{transform:translate(-3px,-1px)}}
+.type{font-size:clamp(16px,3.5vw,22px);color:#5a6275;min-height:30px}.type b{color:#ff1744}
+.cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:40px;font-weight:700;text-decoration:none;transition:.25s}
+.btn.p{background:linear-gradient(90deg,#ff1744,#7c4dff);color:#fff;box-shadow:0 8px 30px rgba(255,23,68,.4)}
+.btn.o{border:1px solid rgba(0,0,0,.18);background:#fff}.btn:hover{transform:translateY(-3px)}
+.scroll{margin-top:20px;font-size:13px;color:#8a90a0;animation:bob 1.6s infinite}@keyframes bob{50%{transform:translateY(8px)}}
+section{padding:80px 0}
+h2{font-size:clamp(28px,5vw,40px);margin-bottom:26px;text-align:center}h2 span{color:#ff1744}
+.card{background:rgba(255,255,255,.9);border:1px solid rgba(0,0,0,.07);box-shadow:0 10px 30px rgba(20,30,60,.07);border-radius:20px;padding:26px;backdrop-filter:blur(6px)}
+.about p{font-size:17px;line-height:1.75;color:#3b4256;margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:22px}
+.stat{text-align:center;padding:20px}.stat b{display:block;font-size:34px;background:linear-gradient(90deg,#ff1744,#00e5ff);-webkit-background-clip:text;color:transparent}
+.stat small{color:#6b7385}
+.bars .row{margin:16px 0}.bars .lab{display:flex;justify-content:space-between;font-size:15px;margin-bottom:7px}
+.bars .tr{height:10px;background:rgba(0,0,0,.07);border-radius:10px;overflow:hidden}
+.bars .fl{height:100%;width:0;border-radius:10px;background:linear-gradient(90deg,#ff1744,#7c4dff,#00e5ff);transition:width 1.6s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 12px rgba(0,229,255,.6)}
+.chart{display:flex;align-items:flex-end;gap:10px;height:200px;margin-top:20px;padding-top:10px}
+.chart div{flex:1;border-radius:8px 8px 0 0;background:linear-gradient(180deg,#00e5ff,#7c4dff);height:0;transition:height 1.4s ease;position:relative}
+.chart div span{position:absolute;bottom:-22px;left:0;right:0;text-align:center;font-size:11px;color:#8a93a6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.proj{position:relative;overflow:hidden;transition:.3s}.proj:hover{transform:translateY(-6px);border-color:rgba(255,23,68,.5)}
+.proj .ic{font-size:38px;margin-bottom:10px}.proj h3{margin-bottom:8px}.proj p{color:#4d5568;font-size:15px;line-height:1.6}
+.proj .tag{display:inline-block;margin-top:12px;font-size:12px;padding:4px 10px;border-radius:20px;background:rgba(255,23,68,.1);color:#d50032}
+.vfx{height:180px;border-radius:14px;margin:-6px -6px 16px;background-size:cover;position:relative;overflow:hidden}
+.vfx:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.25),transparent 70%);transform:translateX(-100%);animation:shine 3.5s infinite}
+@keyframes shine{60%,100%{transform:translateX(100%)}}
+.v1{background:radial-gradient(circle at 30% 40%,#ff1744 0,transparent 40%),radial-gradient(circle at 70% 60%,#7c4dff 0,transparent 45%),#fff0f3}
+.v2{background:repeating-linear-gradient(90deg,rgba(0,229,255,.18) 0 1px,transparent 1px 28px),repeating-linear-gradient(0deg,rgba(0,229,255,.18) 0 1px,transparent 1px 28px),radial-gradient(circle at 50% 120%,#00e5ff,transparent 60%),#eefbff}
+.v3{background:conic-gradient(from 90deg at 50% 50%,#ff1744,#ffea00,#00e5ff,#7c4dff,#ff1744);filter:saturate(1.3)}
+.v3:before{content:"";position:absolute;inset:18px;border-radius:12px;background:#fff;opacity:.85}
+.vtxt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:44px;z-index:2;text-shadow:0 4px 18px rgba(0,0,0,.25)}
+.store{text-align:center;padding:60px 26px;background:linear-gradient(135deg,rgba(255,23,68,.18),rgba(124,77,255,.18));border:1px solid rgba(255,23,68,.4)}
+.store p{color:#3b4256;margin:10px 0 24px;font-size:17px}
+.big{font-size:20px;padding:18px 40px;animation:pulse 2s infinite}@keyframes pulse{50%{box-shadow:0 0 0 14px rgba(255,23,68,0),0 8px 40px rgba(255,23,68,.7)}}
+footer{text-align:center;padding:40px 0 60px;color:#7a8194;font-size:14px}footer a{margin:0 8px;text-decoration:none;color:#3b4256}
+.reveal{opacity:0;transform:translateY(40px);transition:1s}.reveal.on{opacity:1;transform:none}
+</style></head><body>
+<div class="bgimg"></div><canvas id="fx"></canvas>
+<nav><div class="wrap"><div class="logo" style="display:flex;align-items:center;gap:8px"><img src="/logo.jpg" style="width:34px;height:34px;border-radius:50%;border:2px solid #ff1744;object-fit:cover">MR <b>AQDAS</b></div><a class="s" href="#store">🛒 Store</a></div></nav>
+<div class="wrap">
+<header class="hero">
+ <div class="ring"><img src="/me.jpg" alt="Mr AQDAS" style="object-position:50% 25%"></div>
+ <h1><span class="glitch" data-t="MR AQDAS">MR AQDAS</span></h1>
+ <div class="type">I build <b id="tw"></b></div>
+ <div class="cta"><a class="btn p" href="#projects">🚀 View My Work</a><a class="btn o" href="https://wa.me/923194997157" target="_blank" rel="noopener">💬 Contact</a></div>
+ <div class="scroll">▼ scroll down</div>
+</header>
+
+<section id="about" class="reveal"><h2>About <span>Me</span></h2>
+<div class="card about">
+<p>Hi, I'm <b>Muhammad Hussain</b>, known online as <b>Mr AQDAS</b>, a self-taught developer from Multan, Pakistan. I turn ideas into working software: WhatsApp bots that run around the clock, Android apps people actually use, and web tools that solve everyday problems.</p>
+<p>I love learning by building. Every project I ship teaches me something new, from cloud hosting and APIs to AI integration and clean, fast user interfaces. My goal is simple: create tools that are useful, reliable and easy for anyone to use.</p>
+<p style="color:#d50032;font-style:italic">"Keep learning, keep building."</p>
+<div class="stats">
+ <div class="card stat"><b data-n="20">0</b><small>Projects Built</small></div>
+ <div class="card stat"><b data-n="17">0</b><small>Public APIs</small></div>
+ <div class="card stat"><b data-n="24">0</b><small>Hours/Day Bot Uptime</small></div>
+ <div class="card stat"><b data-n="45">0</b><small>Countries Supported</small></div>
+</div></div></section>
+
+<section id="skills" class="reveal"><h2>My <span>Skills</span></h2>
+<div class="grid">
+<div class="card bars">
+ <div class="row"><div class="lab"><span>🤖 WhatsApp Bots (Node.js)</span><span>95%</span></div><div class="tr"><div class="fl" data-w="95"></div></div></div>
+ <div class="row"><div class="lab"><span>📱 Android Apps</span><span>85%</span></div><div class="tr"><div class="fl" data-w="85"></div></div></div>
+ <div class="row"><div class="lab"><span>🌐 Web Design & Development</span><span>88%</span></div><div class="tr"><div class="fl" data-w="88"></div></div></div>
+ <div class="row"><div class="lab"><span>🧠 AI Tools & APIs</span><span>82%</span></div><div class="tr"><div class="fl" data-w="82"></div></div></div>
+ <div class="row"><div class="lab"><span>🛡️ Cyber Security (Ethical)</span><span>75%</span></div><div class="tr"><div class="fl" data-w="75"></div></div></div>
+</div>
+<div class="card"><h3 style="margin-bottom:6px">Activity Graph</h3><small style="color:#8a93a6">Projects shipped per month</small>
+ <div class="chart" id="chart"></div><div style="height:24px"></div></div>
+</div></section>
+
+<section id="projects" class="reveal"><h2>Featured <span>Projects</span></h2>
+<div class="grid">
+ <div class="card proj"><div class="vfx v1"><div class="vtxt">🤖</div></div><h3>AQDAS MD Bot</h3><p>A multi-device WhatsApp bot with a web pairing page for users in 45+ countries, cloud hosting with automatic failover, and dozens of commands.</p><span class="tag">Node.js • Baileys • Railway</span><div style="margin-top:14px"><a class="btn o" style="padding:9px 18px;font-size:14px" href="https://aqdas-md-production.up.railway.app/" target="_blank" rel="noopener">Open Pair Page ↗</a></div></div>
+ <div class="card proj"><div class="vfx v2"><div class="vtxt">📱</div></div><h3>ABIAL AI (Android)</h3><p>An AI assistant app for Android with chat, voice and smart tools, designed to be simple and fast on any phone.</p><span class="tag">Android • AI • Java</span></div>
+ <div class="card proj"><div class="vfx v3"><div class="vtxt">⚡</div></div><h3>Developer APIs</h3><p>A collection of 17+ developer APIs (AI chat, image generation, translation, Quran and more) with an API key system and usage tracking.</p><span class="tag">Serverless • Firebase • REST</span></div>
+</div></section>
+
+<section id="store" class="reveal"><div class="card store">
+ <div style="font-size:54px">🛒</div><h2 style="margin:0">MR AQDAS <span>STORE</span></h2>
+ <p>Apps, web tools, bot services and API keys, all in one place.</p>
+ <a class="btn p big" href="https://aqdas-store.vercel.app" target="_blank" rel="noopener">Visit the Store →</a>
+</div></section>
+</div>
+<footer><div><a href="https://wa.me/923194997157" target="_blank" rel="noopener">WhatsApp</a>•<a href="https://aqdas-store.vercel.app" target="_blank" rel="noopener">Store</a>•<a href="https://github.com/teamhussain59-collab" target="_blank" rel="noopener">GitHub</a></div><p style="margin-top:10px">© <span id="yr"></span> Mr AQDAS • Made in Pakistan 🇵🇰</p></footer>
+<script>
+const c=document.getElementById('fx'),x=c.getContext('2d');let W,H,P=[];
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();onresize=rs;
+for(let i=0;i<70;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+.5});
+(function f(){x.clearRect(0,0,W,H);for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba(255,23,68,.55)';x.fill()}
+for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const a=P[i],b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<120){x.strokeStyle='rgba(124,77,255,'+(1-d/120)*.25+')';x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}requestAnimationFrame(f)})();
+const words=['WhatsApp Bots','Android Apps','Web Tools','AI Projects','Developer APIs'];let wi=0,ci=0,del=false;const tw=document.getElementById('tw');
+(function t(){const w=words[wi];tw.textContent=w.slice(0,ci);if(!del&&ci<w.length)ci++;else if(del&&ci>0)ci--;else if(!del){del=true;return setTimeout(t,1300)}else{del=false;wi=(wi+1)%words.length}setTimeout(t,del?45:90)})();
+const ch=document.getElementById('chart'),data=[2,3,2,4,3,5,6,8],mon=['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'];
+data.forEach((v,i)=>{const d=document.createElement('div');d.dataset.h=v/8*100;d.innerHTML='<span>'+mon[i]+'</span>';ch.appendChild(d)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add('on');
+el.querySelectorAll('.fl').forEach(f=>f.style.width=f.dataset.w+'%');el.querySelectorAll('.chart div').forEach(b=>b.style.height=b.dataset.h+'%');
+el.querySelectorAll('[data-n]').forEach(s=>{let n=0,t=+s.dataset.n;const st=setInterval(()=>{n++;s.textContent=n+(t>=20&&s.dataset.n!='24'?'+':'');if(n>=t)clearInterval(st)},40)});io.unobserve(el)}),{threshold:.2});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));document.getElementById('yr').textContent=new Date().getFullYear();
+</script></body></html>
